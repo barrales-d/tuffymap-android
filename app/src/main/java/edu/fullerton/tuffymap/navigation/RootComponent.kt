@@ -47,7 +47,14 @@ class RootComponent(componentContext: ComponentContext)
                         }
                     )
                 )
-                Config.RegisterPage -> Child.RegisterPage(RegisterComponent(context))
+                Config.RegisterPage -> Child.RegisterPage(
+                    RegisterComponent(
+                        componentContext = context,
+                        navigateToLogin = {
+                            navigation.replaceAll(Config.LoginPage)
+                        }
+                    )
+                )
                 Config.MainPage -> Child.MainPage(
                     MainComponent(
                         componentContext = context,

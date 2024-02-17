@@ -27,6 +27,7 @@ import com.arkivanov.decompose.retainedComponent
 import edu.fullerton.tuffymap.navigation.RootComponent
 import edu.fullerton.tuffymap.ui.screens.LoginScreen
 import edu.fullerton.tuffymap.ui.screens.MainScreen
+import edu.fullerton.tuffymap.ui.screens.RegisterScreen
 import edu.fullerton.tuffymap.ui.theme.TuffyMapTheme
 
 class MainActivity : ComponentActivity() {
@@ -49,7 +50,7 @@ class MainActivity : ComponentActivity() {
                         when(val instance = it.instance) {
                             is RootComponent.Child.LoginPage -> LoginScreen(component = instance.component)
                             is RootComponent.Child.MainPage -> MainScreen(component = instance.component)
-                            is RootComponent.Child.RegisterPage -> {  }
+                            is RootComponent.Child.RegisterPage -> RegisterScreen(component = instance.component)
                         }
                     }
                 }
