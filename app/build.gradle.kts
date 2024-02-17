@@ -80,8 +80,8 @@ dependencies {
     annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
 
 // Mapbox
-    implementation("com.mapbox.maps:android:11.1.0")
-    implementation("com.mapbox.extension:maps-compose:11.1.0")
+//    implementation("com.mapbox.maps:android:11.1.0")
+//    implementation("com.mapbox.extension:maps-compose:11.1.0")
 
     implementation(platform("androidx.compose:compose-bom:2023.08.00"))
     androidTestImplementation(platform("androidx.compose:compose-bom:2023.08.00"))

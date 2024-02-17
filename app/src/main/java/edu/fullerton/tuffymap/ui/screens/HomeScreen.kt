@@ -1,4 +1,4 @@
-@file:OptIn(MapboxExperimental::class)
+//@file:OptIn(MapboxExperimental::class)
 
 package edu.fullerton.tuffymap.ui.screens
 
@@ -21,13 +21,9 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
-import com.mapbox.geojson.Point
-import com.mapbox.maps.MapboxExperimental
-import com.mapbox.maps.extension.compose.MapboxMap
-import com.mapbox.maps.extension.compose.animation.viewport.MapViewportState
+//import com.mapbox.maps.MapboxExperimental
 import edu.fullerton.tuffymap.R
 import edu.fullerton.tuffymap.ui.theme.TuffyMapTheme
-
 
 
 @Composable
@@ -39,8 +35,8 @@ fun HomeScreen() {
         verticalArrangement = Arrangement.Center
     ) {
         Text(text = "Tuffy Map")
-//        ZoomImage()
-        MapScreen()
+        ZoomImage()
+//        MapScreen()
     }
 }
 
@@ -80,17 +76,17 @@ private fun ZoomImage() {
 }
 
 
-@Composable
-private fun MapScreen() {
-    MapboxMap(
-        modifier = Modifier.fillMaxSize(),
-        mapViewportState = MapViewportState().apply {
-            setCameraOptions {
-                zoom(10.0)
-                center(Point.fromLngLat(33.8823, -117.8851))
-                pitch(0.0)
-                bearing(0.0)
-            }
-        }
-    )
-}
+//@Composable
+//private fun MapScreen() {
+//    MapboxMap(
+//        modifier = Modifier.fillMaxSize(),
+//        mapViewportState = MapViewportState().apply {
+//            setCameraOptions {
+//                zoom(10.0)
+//                center(Point.fromLngLat(33.8823, -117.8851))
+//                pitch(0.0)
+//                bearing(0.0)
+//            }
+//        }
+//    )
+//}
